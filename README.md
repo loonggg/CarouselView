@@ -2,6 +2,7 @@
 banner轮播效果
 
 ## 效果图
+![](https://raw.githubusercontent.com/loonggg/CarouselView/master/image/ss.gif)
 
 ## 使用方法（usage）
 ### Step 1. Add the JitPack repository to your build file
