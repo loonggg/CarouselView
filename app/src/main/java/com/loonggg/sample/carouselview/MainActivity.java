@@ -13,12 +13,12 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private CarouselView carouselView;
-    private List<String> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final List<String> list = new ArrayList<>();
         list.add("http://f.hiphotos.baidu.com/image/pic/item/00e93901213fb80e0ee553d034d12f2eb9389484.jpg");
         list.add("http://d.hiphotos.baidu.com/image/pic/item/0823dd54564e92584a00b4e99e82d158ccbf4e84.jpg");
         list.add("http://f.hiphotos.baidu.com/image/h%3D200/sign=15c6eac033adcbef1e3479069cae2e0e/6d81800a19d8bc3e7451d5ce808ba61ea8d3455d.jpg");
@@ -41,9 +41,11 @@ public class MainActivity extends AppCompatActivity {
         carouselView.setOnCarouselViewItemClickListener(new CarouselView.OnCarouselViewItemClickListener() {
             @Override
             public void OnCarouselViewItemClickListener(int position) {
-                Toast.makeText(MainActivity.this,""+position,Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
             }
         });
+        //获取当前展示的item索引
+        //carouselView.getCurrentIndex();
 
     }
 
