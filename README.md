@@ -19,7 +19,7 @@ Add it in your root build.gradle at the end of repositories:
 ### Step 2. Add the dependency
 ```java
 	dependencies {
-	        compile 'com.github.loonggg:CarouselView:v1.0'
+	        compile 'com.github.loonggg:CarouselView:v1.1'
 	}
   ```
 ### Step 3. There are a few xml attributes to customise the  CarouselView
@@ -39,6 +39,8 @@ Add it in your root build.gradle at the end of repositories:
         android:background="#8f8f8f"
         app:flipInterval="3000"
         app:isAutoPlay="true"
+        app:pointFocusBg="@mipmap/point_pressed"
+        app:pointUnfocusBg="@mipmap/point_normal"
         app:pointIntervalWidth="8dp" />
 ```
 
