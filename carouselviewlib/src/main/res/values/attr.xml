@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CarouselView">
+        <attr name="pointFocusBg" format="reference|color" />
+        <attr name="pointUnfocusBg" format="reference|color" />
+        <attr name="pageCount" format="integer" />
+        <attr name="flipInterval" format="integer" />
+        <attr name="pointIntervalWidth" format="dimension" />
+        <attr name="isAutoPlay" format="boolean" />
+    </declare-styleable>
+</resources>
