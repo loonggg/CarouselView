@@ -201,9 +201,17 @@ public class CarouselView extends LinearLayout implements GestureDetector.OnGest
         }
         for (int i = 0; i < pointIvs.length; i++) {
             if (adIndex == i) {
-                pointIvs[i].setImageResource(R.mipmap.ad_point_pressed);
+                if (pointFocusBg != null) {
+                    pointIvs[i].setBackgroundDrawable(pointFocusBg);
+                } else {
+                    pointIvs[i].setImageResource(R.mipmap.ad_point_pressed);
+                }
             } else {
-                pointIvs[i].setImageResource(R.mipmap.ad_point_normal);
+                if (pointUnFocusBg != null) {
+                    pointIvs[i].setBackgroundDrawable(pointUnFocusBg);
+                } else {
+                    pointIvs[i].setImageResource(R.mipmap.ad_point_normal);
+                }
             }
 
         }
@@ -219,9 +227,17 @@ public class CarouselView extends LinearLayout implements GestureDetector.OnGest
         }
         for (int i = 0; i < pointIvs.length; i++) {
             if (adIndex == i) {
-                pointIvs[i].setImageResource(R.mipmap.ad_point_pressed);
+                if (pointFocusBg != null) {
+                    pointIvs[i].setBackgroundDrawable(pointFocusBg);
+                } else {
+                    pointIvs[i].setImageResource(R.mipmap.ad_point_pressed);
+                }
             } else {
-                pointIvs[i].setImageResource(R.mipmap.ad_point_normal);
+                if (pointUnFocusBg != null) {
+                    pointIvs[i].setBackgroundDrawable(pointUnFocusBg);
+                } else {
+                    pointIvs[i].setImageResource(R.mipmap.ad_point_normal);
+                }
             }
 
         }
