@@ -14,6 +14,7 @@
         android:background="#8f8f8f"
         app:flipInterval="3000"
         app:isAutoPlay="true"
+        app:isShowPoint="false"
         app:pointFocusBg="@mipmap/point_pressed"
         app:pointUnfocusBg="@mipmap/point_normal"
         app:pointIntervalWidth="8dp" />

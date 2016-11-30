@@ -32,6 +32,7 @@ public class CarouselView extends LinearLayout implements GestureDetector.OnGest
     private float pointIntervalWidth = 8, pointLayoutMarginBottom = 8;
     private int flipInterval = 2000;
     private boolean isAutoPlay = true;
+    private boolean isShowPoint = true;
 
     public CarouselView(Context context) {
         super(context);
@@ -68,11 +69,15 @@ public class CarouselView extends LinearLayout implements GestureDetector.OnGest
         adCount = typedArray.getInteger(R.styleable.CarouselView_pageCount, 0);
         pointIntervalWidth = typedArray.getDimension(R.styleable.CarouselView_pointIntervalWidth, 8f);
         isAutoPlay = typedArray.getBoolean(R.styleable.CarouselView_isAutoPlay, true);
+        isShowPoint = typedArray.getBoolean(R.styleable.CarouselView_isShowPoint,true);
         adVf.setOnTouchListener(this);
         adVf.setFlipInterval(flipInterval);
         adVf.setLongClickable(true);// 设置长按事件
         adVf.setAutoStart(isAutoPlay);// 设置是否自动播放，默认不自动播放
         detector = new GestureDetector(this);
+        if(!isShowPoint){
+            adPointLayout.setVisibility(View.GONE);
+        }
         typedArray.recycle();
     }
 

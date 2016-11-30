@@ -7,5 +7,6 @@
         <attr name="flipInterval" format="integer" />
         <attr name="pointIntervalWidth" format="dimension" />
         <attr name="isAutoPlay" format="boolean" />
+        <attr name="isShowPoint" format="boolean"/>
     </declare-styleable>
 </resources>
