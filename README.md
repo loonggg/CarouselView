@@ -29,6 +29,7 @@ Add it in your root build.gradle at the end of repositories:
 * flipInterval 设置轮播图间隔滚动时间
 * pointIntervalWidth 设置底部小圆点之间的间隔宽度
 * isAutoPlay 设置是否自动滚动
+* isShowPoint 设置是否显示底部指示导航小圆点
 
 #### Example
 ```xml
