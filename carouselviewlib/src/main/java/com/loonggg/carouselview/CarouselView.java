@@ -81,6 +81,11 @@ public class CarouselView extends LinearLayout implements GestureDetector.OnGest
         typedArray.recycle();
     }
 
+    public void setFlipInterval(int time){
+        flipInterval = time;
+        adVf.setFlipInterval(time);
+    }
+
     public void setPageCount(int pageCount) {
         adCount = pageCount;
         setBanner();
