@@ -19,7 +19,7 @@ Add it in your root build.gradle at the end of repositories:
 ### Step 2. Add the dependency
 ```java
 	dependencies {
-	        compile 'com.github.loonggg:CarouselView:v1.2'
+	        compile 'com.github.loonggg:CarouselView:v1.2.1'
 	}
   ```
 ### Step 3. There are a few xml attributes to customise the  CarouselView
