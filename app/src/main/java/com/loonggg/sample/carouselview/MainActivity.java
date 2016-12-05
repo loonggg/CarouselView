@@ -27,16 +27,25 @@ public class MainActivity extends AppCompatActivity {
         carouselView.setImageCarouselLoaderListener(new CarouselView.ImageCarouselLoaderListener() {
             @Override
             public void setImageForPosition(int position, ImageView imageView) {
-                Glide.with(MainActivity.this)
-                        .load(list.get(position))
-                        .centerCrop()
-                        .placeholder(R.mipmap.ic_launcher)
-                        .crossFade()
-                        .into(imageView);
+//                Glide.with(MainActivity.this)
+//                        .load(list.get(position))
+//                        .centerCrop()
+//                        .placeholder(R.mipmap.ic_launcher)
+//                        .crossFade()
+//                        .into(imageView);
+                if(position ==0){
+                    imageView.setImageResource(R.mipmap.ad_demo);
+                }else if(position == 1){
+                    imageView.setImageResource(R.mipmap.ad_two_demo);
+                }else if(position == 2){
+                    imageView.setImageResource(R.mipmap.ad_three_demo);
+                }else if(position == 3){
+                    imageView.setImageResource(R.mipmap.ic_launcher);
+                }
             }
         });
         //也可以在这里设置轮播banner数
-        carouselView.setPageCount(3);
+        carouselView.setPageCount(4);
         //设置点击事件
         carouselView.setOnCarouselViewItemClickListener(new CarouselView.OnCarouselViewItemClickListener() {
             @Override

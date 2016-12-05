@@ -69,19 +69,19 @@ public class CarouselView extends LinearLayout implements GestureDetector.OnGest
         adCount = typedArray.getInteger(R.styleable.CarouselView_pageCount, 0);
         pointIntervalWidth = typedArray.getDimension(R.styleable.CarouselView_pointIntervalWidth, 8f);
         isAutoPlay = typedArray.getBoolean(R.styleable.CarouselView_isAutoPlay, true);
-        isShowPoint = typedArray.getBoolean(R.styleable.CarouselView_isShowPoint,true);
+        isShowPoint = typedArray.getBoolean(R.styleable.CarouselView_isShowPoint, true);
         adVf.setOnTouchListener(this);
         adVf.setFlipInterval(flipInterval);
         adVf.setLongClickable(true);// 设置长按事件
         adVf.setAutoStart(isAutoPlay);// 设置是否自动播放，默认不自动播放
         detector = new GestureDetector(this);
-        if(!isShowPoint){
+        if (!isShowPoint) {
             adPointLayout.setVisibility(View.GONE);
         }
         typedArray.recycle();
     }
 
-    public void setFlipInterval(int time){
+    public void setFlipInterval(int time) {
         flipInterval = time;
         adVf.setFlipInterval(time);
     }
@@ -249,7 +249,6 @@ public class CarouselView extends LinearLayout implements GestureDetector.OnGest
                     pointIvs[i].setImageResource(R.mipmap.ad_point_normal);
                 }
             }
-
         }
 
     }

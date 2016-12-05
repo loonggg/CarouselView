@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:background="#8f8f8f"
-        app:flipInterval="3000"
+        app:flipInterval="5000"
         app:isAutoPlay="true"
         app:isShowPoint="false"
         app:pointFocusBg="@mipmap/point_pressed"
