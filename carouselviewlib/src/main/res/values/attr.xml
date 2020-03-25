@@ -6,6 +6,7 @@
         <attr name="pageCount" format="integer" />
         <attr name="flipInterval" format="integer" />
         <attr name="pointIntervalWidth" format="dimension" />
+        <attr name="pointMarginBottom" format="dimension" />
         <attr name="isAutoPlay" format="boolean" />
         <attr name="isShowPoint" format="boolean"/>
     </declare-styleable>
