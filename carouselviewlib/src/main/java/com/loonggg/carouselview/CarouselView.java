@@ -68,6 +68,7 @@ public class CarouselView extends LinearLayout implements GestureDetector.OnGest
         flipInterval = typedArray.getInteger(R.styleable.CarouselView_flipInterval, 2000);
         adCount = typedArray.getInteger(R.styleable.CarouselView_pageCount, 0);
         pointIntervalWidth = typedArray.getDimension(R.styleable.CarouselView_pointIntervalWidth, 8f);
+        pointLayoutMarginBottom = typedArray.getDimension(R.styleable.CarouselView_pointMarginBottom, 8f);
         isAutoPlay = typedArray.getBoolean(R.styleable.CarouselView_isAutoPlay, true);
         isShowPoint = typedArray.getBoolean(R.styleable.CarouselView_isShowPoint, true);
         adVf.setOnTouchListener(this);
@@ -138,7 +139,7 @@ public class CarouselView extends LinearLayout implements GestureDetector.OnGest
             }
             LayoutParams pointIvParams = new LayoutParams(
                     LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-            pointIvParams.setMargins((int) pointIntervalWidth, 0, 0, 0);
+            pointIvParams.setMargins((int) pointIntervalWidth, 0, 0, (int)pointLayoutMarginBottom);
             pointIvs[i].setLayoutParams(pointIvParams);
             adPointLayout.addView(pointIvs[i]);
         }
